@@ -1,9 +1,8 @@
 import React from 'react'
 import "./FoodCard.css"
-//import vegIcon from "./veg-icons.png"
-//import nonVegIcon from "./non-veg-icons.png"
+import { THEME } from '../../config/data'
 
-function FoodCard({imgUrl, title,description } ) {
+function FoodCard({imgUrl, title,description,price } ) {
 
     
 
@@ -15,9 +14,23 @@ function FoodCard({imgUrl, title,description } ) {
       className="food-card-image"
       alt="Food"/>
       
-        <h1 className="food-card-title">
+        <h1 className="food-card-title" style={{color:THEME.highlight}}>
           {title}</h1>
         <p>{description}</p>
+
+        {
+          price ?
+          <p className="ice-cream-card-price">
+          Rs {price}
+          </p>
+          :null
+
+        }
+        <button className="ice-cream-card-button" style={{backgroundColor:THEME.highlight}}>
+          Add to Card
+        </button>
+
+       
     </div>
   )
 }

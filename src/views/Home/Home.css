@@ -1,5 +1,13 @@
 .food-cards-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+.tagline-header{
+    text-align: center;
+color: black;
+    
+    font-size: 25px;
+    margin: 20px 0;
+
 }
